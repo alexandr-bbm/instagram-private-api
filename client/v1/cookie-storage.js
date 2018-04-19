@@ -44,7 +44,7 @@ CookieStorage.prototype.putCookie = function (cookie) {
 CookieStorage.prototype.getCookies = function () {
     var self = this;
     return new Promise(function(resolve, reject) {
-        self.storage.findCookies(CONSTANTS.HOSTNAME, '/', function(err, cookies){
+        self.storage.findCookies(CONSTANTS.COOKIE_DOMAIN, '/', function(err, cookies){
             if (err) return reject(err);
             resolve(cookies || []);
         })
@@ -80,7 +80,7 @@ CookieStorage.prototype.getSessionId = function () {
 CookieStorage.prototype.removeCheckpointStep = function () {
     var self = this;
     return new Promise(function(resolve, reject) {
-        self.storage.removeCookie(CONSTANTS.HOSTNAME, '/', 'checkpoint_step', function(err){
+        self.storage.removeCookie(CONSTANTS.COOKIE_DOMAIN, '/', 'checkpoint_step', function(err){
             if (err) return reject(err);
             resolve();
         })

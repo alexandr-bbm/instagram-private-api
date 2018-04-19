@@ -98,6 +98,7 @@ const PRIVATE_KEY = {
 
 const TLD = 'instagram.com';
 const HOSTNAME = 'i.instagram.com';
+const COOKIE_DOMAIN = 'instagram.com';
 const WEB_HOSTNAME = 'www.instagram.com';
 const HOST = 'https://' + HOSTNAME + '/';
 const WEBHOST = 'https://' + WEB_HOSTNAME + '/';
@@ -107,6 +108,7 @@ module.exports = {
     ROUTES: ROUTES,
     WEB_ROUTES: WEB_ROUTES,
     HOSTNAME: HOSTNAME,
+    COOKIE_DOMAIN: COOKIE_DOMAIN,
     WEB_HOSTNAME: WEB_HOSTNAME,
     HOST: HOST,
     WEBHOST: WEBHOST,
